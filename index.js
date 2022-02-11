@@ -9,7 +9,11 @@ let ledStatus= 0;
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
-app.post('/', function (req, res) {
+app.get('/', (req, res) => {
+   res.send('Hello World!')
+ });
+
+app.post('/master', function (req, res) {
    ledStatus=req.body.status;
    res.send(ledStatus);
 
