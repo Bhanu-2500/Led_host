@@ -3,8 +3,8 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT 
 
-let ledStatus= new Boolean();
-ledStatus=0;
+let ledStatus= 0;
+
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:false}));
